@@ -18,8 +18,7 @@ class Game
     @player_1 = player_1
     @player_2 = player_2
     @board = board
-    @board.display
-end
+    end
 
   def current_player
     if board.turn_count.even?
@@ -70,7 +69,6 @@ end
     board.reset!
     board.display
     until over?
-      binding.pry
       turn
     end
     if draw?
